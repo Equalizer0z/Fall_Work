@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+    <title>Form Submission Example</title>
+</head>
+<body style="background:#ebe8e8">
+    <h2> Enter Your Name</h2>
+    <form id="myForm">
+        <input type="text" id="nameinput" placeholder="Your name">
+    <input type="submit" value="Submit">
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    document.getElementById ("myForm").addEventsListener("submit", function(event) 
+    {event.preventDefault(); // Stops the form from refreshing the page 
+    let name = document.getElementById("nameInput").value;
+    document.getElementById("result").innerHTML ="Hello, " + name +"!";
+  });
+</script>
+    </form>
+</body>
+</HTML>
